@@ -1,8 +1,8 @@
-import { Lexend, Outfit } from "next/font/google";
+import { Sora, Outfit } from "next/font/google";
 import "./globals.css";
 
 // Configure fonts
-const lexend = Lexend({ subsets: ["latin"], weight: ["400", "600", "700"] });
+const sora = Sora({ subsets: ["latin"], weight: ["200", "300", "400", "600", "700"] });
 const outfit = Outfit({ subsets: ["latin"], weight: ["400", "500", "700"] });
 
 export const metadata = {
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       {/* Outfit = global font for body text */}
       <body className={outfit.className}>
         {/* Lexend = for headings */}
-        <div className={lexend.className}>{children}</div>
+        <div className={sora.className}>{children}</div>
       </body>
     </html>
   );
