@@ -29,16 +29,28 @@ export default function HeroSection() {
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+<div className="flex flex-col sm:flex-row gap-4 pt-4">
             {/* Free Quote Button */}
-            <button className="px-6 py-3 bg-[#FA8C3D] text-white font-medium rounded-lg flex items-center gap-2 hover:opacity-90 transition">
-              Free Quote <MdKeyboardArrowRight size={22} />
-            </button>
+<button
+  style={{
+    clipPath: "polygon(14.7483% 7.75%, 103.1% 9%, 81.1024% 94.5%, -0.8864% 94.5%)",
+  }}
+  className="px-6 py-3 bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-2 hover:opacity-90 transition rounded-[12px]"
+>
+  Free Quote <MdKeyboardArrowRight size={22} />
+</button>
+
 
             {/* Book Consultation Button */}
-            <button className="px-6 py-3 bg-white text-black font-medium rounded-lg flex items-center gap-2 hover:bg-gray-200 transition">
-              Book a Consultation <MdKeyboardArrowRight size={22} />
-            </button>
+           <button
+  style={{
+    clipPath: "polygon(10.7483% 7.75%, 103.1% 9%, 85.1024% 94.5%, -2.8864% 92.5%)"
+  }}
+  className="px-6 py-3 bg-white text-black font-medium shadow-sm flex items-center gap-2 hover:bg-gray-200 transition rounded-[12px]"
+>
+  Book a Consultation <MdKeyboardArrowRight size={22} />
+</button>
+
           </div>
         </div>
       </div>

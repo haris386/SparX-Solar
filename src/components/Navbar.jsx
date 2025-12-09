@@ -20,7 +20,15 @@ export default function Navbar() {
     // nav is absolute so it sits on top of the hero
     <nav className="absolute top-4 left-0 w-full z-50 pointer-events-auto">
       {/* centered white navbar with 90% width */}
-      <div className="w-[90%] mx-auto h-20 flex items-center justify-between bg-white shadow-sm pl-[15px] pr-[15px]">
+<div
+  className="
+    w-[90%] mx-auto h-20 flex items-center justify-between 
+    bg-white shadow-sm pl-[15px] pr-[15px] 
+    lg:rounded-[30px] overflow-hidden
+    md:[clip-path:polygon(3.7483%_7.75%,100.1%_11%,95.1024%_89.5%,0.1136%_90.5%)]
+  "
+>
+
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -53,9 +61,15 @@ export default function Navbar() {
         </ul>
 
         {/* Desktop CTA */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex lg:mr-[15px]">
           <button
             className="px-6 py-3 rounded-lg bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-1 hover:opacity-90 transition"
+            style={{
+      borderRadius: "20px",
+      overflow: "hidden",
+      clipPath:
+        "polygon(16.7483% 7.75%, 103.1% 9%, 73.1024% 94.5%, -0.8864% 92.5%)",
+    }}
           >
             Let’s Talk <MdKeyboardArrowRight size={22} />
           </button>
@@ -73,8 +87,7 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu (positioned directly under the white navbar container,
-          centered and using the same 90% width) */}
+      {/* Mobile Menu  */}
       {isOpen && (
         <div className="md:hidden absolute left-1/2 top-[calc(4rem+0.5rem)] -translate-x-1/2 w-[90%] bg-white shadow-lg py-6">
           <ul className="flex flex-col items-center justify-center space-y-5 text-black font-medium">
@@ -90,14 +103,21 @@ export default function Navbar() {
               </li>
             ))}
 
-            <li>
-              <button
-                className="px-6 py-2 rounded-lg bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-1 hover:opacity-90 transition"
-                onClick={() => setIsOpen(false)}
-              >
-                Let’s Talk <MdKeyboardArrowRight size={20} />
-              </button>
-            </li>
+          <li>
+  <button
+    className="px-6 py-2 text-white font-medium shadow-sm flex items-center gap-1 hover:opacity-90 transition bg-[#FA8C3D]"
+    onClick={() => setIsOpen(false)}
+    style={{
+      borderRadius: "30px",
+      overflow: "hidden",
+      clipPath:
+        "polygon(3.7483% 7.75%, 100.1% 11%, 95.1024% 89.5%, 0.1136% 90.5%)",
+    }}
+  >
+    Let’s Talk <MdKeyboardArrowRight size={20} />
+  </button>
+</li>
+
           </ul>
         </div>
       )}
