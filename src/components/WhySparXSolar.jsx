@@ -49,18 +49,19 @@ export default function WhySparXSolar() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {boxes.map((box, index) => (
             <div
-              key={index}
-              className="p-6 rounded-[20px] bg-[#FFF6EF] hover:bg-[#FA8C3D] transition-colors cursor-pointer min-h-[180px] flex flex-col justify-start"
-            >
-              {box.heading && (
-                <h3 className="text-lg font-semibold mb-2 text-[#303F52B2] hover:text-white">
-                  {box.heading}
-                </h3>
-              )}
-              <p className="text-sm text-[#303F52B2] hover:text-white leading-relaxed">
-                {box.desc}
-              </p>
-            </div>
+  key={index}
+  className="p-6 rounded-[20px] bg-[#FFF6EF] hover:bg-[#FA8C3D] transition-colors cursor-pointer min-h-[180px] flex flex-col justify-start group"
+>
+  {box.heading && (
+    <h3 className="text-lg font-semibold mb-2 text-[#303F52B2] group-hover:text-white transition-colors">
+      {box.heading}
+    </h3>
+  )}
+  <p className="text-sm text-[#303F52B2] group-hover:text-white transition-colors leading-relaxed">
+    {box.desc}
+  </p>
+</div>
+
           ))}
         </div>
       </div>

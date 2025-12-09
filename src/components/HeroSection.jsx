@@ -5,6 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 export default function HeroSection() {
   return (
     <section
+    id="home"
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-start"
       style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
     >
@@ -33,7 +34,7 @@ export default function HeroSection() {
             {/* Free Quote Button */}
 <button
   style={{
-    clipPath: "polygon(14.7483% 7.75%, 103.1% 9%, 81.1024% 94.5%, -0.8864% 94.5%)",
+    clipPath: "polygon(7.7483% 7.75%, 103.1% 9%, 88.1024% 94.5%, -0.8864% 94.5%)",
   }}
   className="px-6 py-3 bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-2 hover:opacity-90 transition rounded-[12px]"
 >
@@ -41,15 +42,17 @@ export default function HeroSection() {
 </button>
 
 
+
             {/* Book Consultation Button */}
-           <button
+<button
   style={{
-    clipPath: "polygon(10.7483% 7.75%, 103.1% 9%, 85.1024% 94.5%, -2.8864% 92.5%)"
+    clipPath: "polygon(7.7483% 7.75%, 103.1% 9%, 90.1024% 94.5%, -2.8864% 92.5%)"
   }}
   className="px-6 py-3 bg-white text-black font-medium shadow-sm flex items-center gap-2 hover:bg-gray-200 transition rounded-[12px]"
 >
   Book a Consultation <MdKeyboardArrowRight size={22} />
 </button>
+
 
           </div>
         </div>

@@ -5,6 +5,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 export default function Contact() {
   return (
     <section
+    id="contact"
       className="w-full bg-cover bg-center bg-no-repeat py-4 px-4"
       style={{ backgroundImage: "url('/images/contact.jpg')" }}
     >
