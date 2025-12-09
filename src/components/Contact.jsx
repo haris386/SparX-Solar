@@ -96,12 +96,17 @@ export default function Contact() {
             </div>
 
             {/* Submit */}
-            <button
-              type="submit"
-              className="mt-4 px-6 py-3 bg-[#FA8C3D] text-white rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition"
-            >
-              Submit <MdKeyboardArrowRight size={22} />
-            </button>
+<button
+  type="submit"
+  style={{
+    clipPath: "polygon(6.7483% 7.75%, 101.1% 9%, 90.1024% 95.5%, -0.8864% 94.5%)",
+  }}
+  className="mt-4 px-6 py-3 bg-[#FA8C3D] text-white rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition"
+>
+  Submit <MdKeyboardArrowRight size={22} />
+</button>
+
+
 
           </form>
         </div>

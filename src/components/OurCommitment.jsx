@@ -48,9 +48,15 @@ export default function OurCommitment() {
               </p>
             </div>
             <div>
-              <button className="flex items-center gap-2 px-6 py-3 bg-[#FA8C3D] text-white font-medium rounded-lg hover:opacity-90 transition">
-                Contact Us <MdKeyboardArrowRight size={22} />
-              </button>
+            <button
+  style={{
+    clipPath: "polygon(14.7483% 7.75%, 103.1% 9%, 81.1024% 94.5%, -0.8864% 94.5%)",
+  }}
+  className="flex items-center gap-2 px-6 py-3 bg-[#FA8C3D] text-white font-medium rounded-lg hover:opacity-90 transition"
+>
+  Contact Us <MdKeyboardArrowRight size={22} />
+</button>
+
             </div>
           </div>
 
