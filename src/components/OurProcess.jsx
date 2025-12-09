@@ -15,7 +15,7 @@ export default function OurProcess() {
     </section>
 
     <section className="w-full py-24 flex justify-center px-4">
-        <div className="w-[90%] md:w-[80%] mt-12">
+        <div className="w-[90%] md:w-[80%]">
           {/* Top row: Heading and text */}
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <h2 className="text-3xl md:text-[44px] text-[#303F52] font-[300]">
@@ -27,7 +27,7 @@ export default function OurProcess() {
           </div>
 
           {/* Container with top border */}
-          <div className="w-full bg-[#FFD1B133] border-t-4 border-[#FA8C3D] rounded-t-md"></div>
+          <div className="w-full bg-[#FFD1B133] border-t-4 border-[#FA8C3D] rounded-t-md mt-8"></div>
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 ">

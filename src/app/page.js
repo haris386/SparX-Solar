@@ -6,6 +6,9 @@ import WhySparXSolar from "@/components/WhySparXSolar";
 import OurCommitment from "@/components/OurCommitment";
 import WhyChooseSparXSolar from "@/components/WhyChooseSparXSolar";
 import OurProcess from "@/components/OurProcess";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -16,6 +19,9 @@ export default function Home() {
       <OurCommitment />
       <WhyChooseSparXSolar />
       <OurProcess />
+      <Testimonials />
+      <Contact />
+      <Footer />
     </>
   );
 }
