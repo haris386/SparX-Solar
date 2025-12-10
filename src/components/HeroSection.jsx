@@ -1,11 +1,12 @@
 "use client";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
+import SkewedButton from "./SkewedButton";
 
 export default function HeroSection() {
   return (
     <section
-    id="home"
+      id="home"
       className="relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex items-start"
       style={{ backgroundImage: "url('/images/hero-bg.jpg')" }}
     >
@@ -13,48 +14,45 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-r from-[#26384e]/90 to-black/30"></div>
 
       {/* Content */}
-      <div className="relative w-[90%] mx-auto text-white max-w-[1400px] pt-24 md:pt-28 lg:pt-32">
+      <div className="relative w-[90%] mx-auto text-white max-w-[1400px] pt-24 md:pt-28 lg:pt-32 lg:pb-24">
         <div className="w-full md:w-[55%] lg:w-[45%] space-y-6 mt-[10%]">
           {/* Heading */}
-          <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[44px] xl:text-[44px] leading-relaxed">
+          <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[44px] xl:text-[44px] custom-lh">
             Quality Solar Installation.
             <br />
             We're Using Sunlight to Keep The Lights On
           </h1>
 
           {/* Subtitle */}
-          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed">
+          <p className="text-base sm:text-lg md:text-xl text-gray-200 leading-relaxed font-[300]">
             Sparx Solar helps homeowners switch to clean energy with trusted
             installation, transparent pricing, and a seamless experience from
             start to finish.
           </p>
 
           {/* Buttons */}
-<div className="flex flex-col sm:flex-row gap-4 pt-4">
-            {/* Free Quote Button */}
-<button
-  style={{
-    clipPath: "polygon(7.7483% 7.75%, 103.1% 9%, 88.1024% 94.5%, -0.8864% 94.5%)",
-  }}
-  className="px-6 py-3 bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-2 hover:opacity-90 transition rounded-[12px]"
->
-  Free Quote <MdKeyboardArrowRight size={22} />
-</button>
+          <div className="flex flex-col sm:flex-row gap-8 pt-4">
+ <SkewedButton
+        text="Free Quote"
+        color="#FA8C3D"
+        textColor="#fff"
+        size="medium"
+        icon={<MdKeyboardArrowRight size={22} />}
+        onClick={() => alert("Free Quote clicked")}
+      />
 
-
-
-            {/* Book Consultation Button */}
-<button
-  style={{
-    clipPath: "polygon(7.7483% 7.75%, 103.1% 9%, 90.1024% 94.5%, -2.8864% 92.5%)"
-  }}
-  className="px-6 py-3 bg-white text-black font-medium shadow-sm flex items-center gap-2 hover:bg-gray-200 transition rounded-[12px]"
->
-  Book a Consultation <MdKeyboardArrowRight size={22} />
-</button>
-
-
+      {/* White button with dark text */}
+      <SkewedButton
+        text="Book Consultation"
+        color="white"
+        textColor="#303F52"
+        size="medium"
+        icon={<MdKeyboardArrowRight size={22} />}
+      />
           </div>
+           <div className="button-box">
+       
+      </div>
         </div>
       </div>
     </section>

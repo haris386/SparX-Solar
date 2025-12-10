@@ -27,13 +27,13 @@ export default function OurProcess() {
           </div>
 
           {/* Container with top border */}
-          <div className="w-full bg-[#FFD1B133] border-t-4 border-[#FA8C3D] rounded-t-md mt-8"></div>
+          <div className="w-full bg-[#FFD1B133] border-t-2 border-[#FA8C3D] rounded-t-md mt-8"></div>
 
           {/* Cards */}
           <div className="grid grid-cols-1 md:grid-cols-3 ">
             {/* Card 1 */}
-            <div className="bg-[#FFD1B133] p-6">
-              <h3 className="text-[10rem] font-[200] text-black">01</h3>
+            <div className="bg-[#FFD1B133] p-8">
+              <h3 className="text-[10rem] font-[200] text-black pt-[0%] pl-[0%] pr-[0%] pb-[10%]">01</h3>
               <h4 className="text-xl text-[#303F52] mt-2 mb-2">Planning & Permitting</h4>
               <p className="text-[#303F52] text-base">
                 We begin by thoroughly inspecting your property and designing a customized solar plan tailored to your energy needs. Then, we handle all necessary approvals from local regulators and your utility company, ensuring a smooth start to your solar journey.
@@ -41,8 +41,8 @@ export default function OurProcess() {
             </div>
 
             {/* Card 2 */}
-            <div className="bg-[#FEDD4433] p-6">
-              <h3 className="text-[10rem] font-[200] text-black">02</h3>
+            <div className="bg-[#FEDD4433] p-8">
+              <h3 className="text-[10rem] font-[200] text-black pt-[0%] pl-[0%] pr-[0%] pb-[10%]">02</h3>
               <h4 className="text-xl text-[#303F52] mt-2 mb-2">Installation</h4>
               <p className="text-[#303F52] text-base">
                 Next, our expert team prepares your roof, installs high-quality solar panels, and configures the complete electrical layout. We ensure that every component is installed safely, efficiently, and according to industry best practices.
@@ -50,8 +50,8 @@ export default function OurProcess() {
             </div>
 
             {/* Card 3 */}
-            <div className="bg-[#FFD1B133] p-6">
-              <h3 className="text-[10rem] font-[200] text-black">03</h3>
+            <div className="bg-[#FFD1B133] p-8">
+              <h3 className="text-[10rem] font-[200] text-black pt-[0%] pl-[0%] pr-[0%] pb-[10%]">03</h3>
               <h4 className="text-xl text-[#303F52] mt-2 mb-2">Approval & Activation</h4>
               <p className="text-[#303F52] text-base">
                 Finally, after a comprehensive inspection, we secure PTO (Permission to Operate) from your local utility company. Once approved, your system is connected to the grid, and you can start enjoying clean, reliable, and cost-effective solar energy.

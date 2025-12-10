@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import SkewedButton from "./SkewedButton";
 
 export default function OurCommitment() {
   const boxes = [
@@ -48,20 +49,19 @@ export default function OurCommitment() {
               </p>
             </div>
             <div>
-<button
-  style={{
-    clipPath: "polygon(14.7483% 7.75%, 103.1% 9%, 81.1024% 94.5%, -0.8864% 94.5%)",
-  }}
-  className="flex items-center gap-2 px-6 py-3 bg-[#FA8C3D] text-white font-medium rounded-lg hover:opacity-90 transition"
+<SkewedButton
+  text="Contact Us"
+  color="#FA8C3D"
+  textColor="#fff"
+  size="medium"
+  icon={<MdKeyboardArrowRight size={22} />}
   onClick={() => {
     const contactSection = document.getElementById("contact");
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: "smooth" });
     }
   }}
->
-  Contact Us <MdKeyboardArrowRight size={22} />
-</button>
+/>
 
 
             </div>
@@ -106,7 +106,7 @@ export default function OurCommitment() {
     {/* Right Column: Text + Boxes */}
     <div className="lg:w-1/2 flex flex-col gap-6">
       {/* Heading */}
-      <h2 className="text-3xl sm:text-4xl md:text-[36px] leading-[1.2] text-[#303F52]">
+      <h2 className="text-3xl sm:text-4xl md:text-[36px] custom-lh text-[#303F52]">
         Guaranteed <span className="text-[#FA8C3D] font-bold">15 Jobs</span> <span className="block">Within your first <span className="text-[#FA8C3D] font-bold">90 days</span></span>
       </h2>
 
@@ -117,10 +117,10 @@ export default function OurCommitment() {
 
       {/* Boxes */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div className="bg-[#FFD1B133] p-4 rounded-[20px] text-[#303F52]">
+        <div className="bg-[#FFD1B133] p-6 rounded-[20px] text-[#303F52]">
           If we don’t deliver, we’ll return your money to compensate for your time.
         </div>
-        <div className="bg-[#FFD1B133] p-4 rounded-[20px] text-[#303F52]">
+        <div className="bg-[#FFD1B133] p-6 rounded-[20px] text-[#303F52]">
           Or we’ll stay on the project at no charge and keep working until the goal is fully met.
         </div>
       </div>

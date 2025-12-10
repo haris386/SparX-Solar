@@ -34,10 +34,8 @@ export default function WhyChooseSparXSolar() {
         {boxes.map((box, index) => (
           <div
             key={index}
-            className={`relative rounded-[20px] overflow-hidden flex flex-col justify-end p-6 ${
-              box.type === "main"
-                ? "bg-[#FA8C3D] text-white h-[400px]"
-                : "h-[300px] md:h-[350px] lg:h-[400px]"
+            className={`relative rounded-[20px] overflow-hidden flex flex-col justify-end ${
+              box.type === "main" ? "bg-[#FA8C3D] text-white h-[400px] p-14" : "h-[300px] md:h-[350px] lg:h-[400px] p-6"
             }`}
             style={
               box.type === "image"
@@ -52,7 +50,7 @@ export default function WhyChooseSparXSolar() {
             <h3
               className={`${
                 box.type === "main"
-                  ? "text-[40px] lg:text-[55px] leading-[1.2] mb-[10px] text-white font-normal"
+                  ? "text-[40px] lg:text-[45px] leading-[1.2] mb-[10px] text-white font-normal"
                   : "text-xl sm:text-2xl font-semibold text-white"
               }`}
             >
@@ -61,8 +59,8 @@ export default function WhyChooseSparXSolar() {
             <p
               className={`${
                 box.type === "main"
-                  ? "text-[20px] lg:text-[25px] text-white"
-                  : "text-sm sm:text-base text-white"
+                  ? "text-[20px] lg:text-[25px] text-white font-[300]"
+                  : "text-sm sm:text-base text-white font-[300]"
               }`}
             >
               {box.text}

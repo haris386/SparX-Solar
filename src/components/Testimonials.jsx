@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
+import { MdKeyboardArrowLeft, MdKeyboardArrowRight } from "react-icons/md";
+
 
 export default function Testimonials() {
   const testimonials = [
@@ -34,15 +35,15 @@ export default function Testimonials() {
           <img
             src="/images/testimonials.png"
             alt="Customer Testimonials"
-            className="rounded-[20px] w-[90%] h-auto object-cover"
+            className="rounded-[20px] w-[85%] h-auto object-cover"
           />
         </div>
 
         {/* Right Column: Testimonials */}
         <div className="lg:w-1/2 flex flex-col gap-6">
           {/* Heading + Slider Buttons */}
-          <div className="flex justify-between items-center">
-            <h2 className="text-3xl md:text-[36px] font-[300] text-[#303F52]">
+          <div className="flex justify-between items-end">
+            <h2 className="text-3xl md:text-[36px] font-[300] text-[#303F52] custom-lh">
               Customer <span className="block">Testimonials</span>
             </h2>
             <div className="flex gap-2">
@@ -50,23 +51,23 @@ export default function Testimonials() {
                 onClick={prevTestimonial}
                 className="p-2 bg-[#FA8C3D] rounded-[5px] text-white hover:opacity-90 transition"
               >
-                <MdArrowBack size={24} />
+                <MdKeyboardArrowLeft size={24} />
               </button>
               <button
                 onClick={nextTestimonial}
                 className="p-2 bg-[#FA8C3D] rounded-[5px] text-white hover:opacity-90 transition"
               >
-                <MdArrowForward size={24} />
+                <MdKeyboardArrowRight size={24} />
               </button>
             </div>
           </div>
 
           {/* Testimonial Card */}
-          <div className="bg-[#FFD1B133] p-6 rounded-[20px]">
-            <p className="text-[#303F52] text-base md:text-lg leading-relaxed">
+          <div className="bg-[#FFD1B133] p-10">
+            <p className="text-[#303F52] text-base md:text-[15px] mb-12 leading-relaxed">
               {testimonials[current].text}
             </p>
-            <p className="mt-4 font-medium text-[#303F52]">{testimonials[current].name}</p>
+            <p className="mt-4 text-[#303F52] font-bold">{testimonials[current].name}</p>
           </div>
         </div>
       </div>

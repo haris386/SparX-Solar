@@ -1,14 +1,18 @@
 "use client";
 
 import { MdKeyboardArrowRight } from "react-icons/md";
+import SkewedButton from "./SkewedButton";
 
 export default function Contact() {
   return (
-    <section
-    id="contact"
-      className="w-full bg-cover bg-center bg-no-repeat py-4 px-4"
+<section
+      id="contact"
+      className="relative w-full bg-cover bg-center bg-no-repeat py-4 px-4"
       style={{ backgroundImage: "url('/images/contact.jpg')" }}
     >
+      {/* Left-to-right black overlay */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
+
       <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-40 items-start p-0 lg:p-20">
         {/* Left Column: Contact Info */}
         <div className="lg:w-1/2 flex flex-col gap-6 text-white">
@@ -97,15 +101,19 @@ export default function Contact() {
             </div>
 
             {/* Submit */}
-<button
-  type="submit"
-  style={{
-    clipPath: "polygon(6.7483% 7.75%, 101.1% 9%, 90.1024% 95.5%, -0.8864% 94.5%)",
+<SkewedButton
+  text="Submit"
+  color="#FA8C3D"
+  textColor="#fff"
+  size="medium"
+  rounded={false}  
+  icon={<MdKeyboardArrowRight size={22} />}
+  onClick={(e) => {
+    e.preventDefault(); 
+    const form = document.querySelector("form");
+    if (form) form.submit();
   }}
-  className="mt-4 px-6 py-3 bg-[#FA8C3D] text-white rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition"
->
-  Submit <MdKeyboardArrowRight size={22} />
-</button>
+/>
 
 
 

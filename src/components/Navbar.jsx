@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import { MdKeyboardArrowRight, MdKeyboardArrowDown } from "react-icons/md";
+import SkewedButton from "./SkewedButton";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,15 +21,7 @@ export default function Navbar() {
     // nav is absolute so it sits on top of the hero
     <nav className="absolute top-4 left-0 w-full z-50 pointer-events-auto">
       {/* centered white navbar with 90% width */}
-<div
-  className="
-    w-[90%] mx-auto h-20 flex items-center justify-between 
-    bg-white shadow-sm pl-[15px] pr-[15px] 
-    lg:rounded-[30px] overflow-hidden
-    md:[clip-path:polygon(3.7483%_7.75%,100.1%_11%,95.1024%_89.5%,0.1136%_90.5%)]
-  "
->
-
+      <div className="skewed-navbar">
         {/* Logo */}
         <div className="flex items-center">
           <Image
@@ -44,7 +37,10 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex justify-center space-x-10 text-black font-medium">
           {menuItems.map((item) => (
-            <li key={item.id} className="flex items-center gap-1 cursor-pointer">
+            <li
+              key={item.id}
+              className="flex items-center gap-1 cursor-pointer"
+            >
               <a
                 href={`#${item.id}`}
                 className="hover:text-[#FA8C3D] transition"
@@ -62,17 +58,20 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <div className="hidden md:flex lg:mr-[15px]">
-          <button
-            className="px-6 py-3 rounded-lg bg-[#FA8C3D] text-white font-medium shadow-sm flex items-center gap-1 hover:opacity-90 transition"
-            style={{
-      borderRadius: "20px",
-      overflow: "hidden",
-      clipPath:
-        "polygon(16.7483% 7.75%, 103.1% 9%, 73.1024% 94.5%, -0.8864% 92.5%)",
-    }}
-          >
-            Let’s Talk <MdKeyboardArrowRight size={22} />
-          </button>
+          <SkewedButton
+            text="Let's Talk"
+            color="#FA8C3D"
+            textColor="#fff"
+            size="medium"
+            icon={<MdKeyboardArrowRight size={22} />}
+            rounded={true}
+            onClick={() => {
+              const contactSection = document.getElementById("contact");
+              if (contactSection) {
+                contactSection.scrollIntoView({ behavior: "smooth" });
+              }
+            }}
+          />
         </div>
 
         {/* Mobile Hamburger */}
@@ -103,21 +102,23 @@ export default function Navbar() {
               </li>
             ))}
 
-          <li>
-  <button
-    className="px-6 py-2 text-white font-medium shadow-sm flex items-center gap-1 hover:opacity-90 transition bg-[#FA8C3D]"
-    onClick={() => setIsOpen(false)}
-    style={{
-      borderRadius: "30px",
-      overflow: "hidden",
-      clipPath:
-        "polygon(3.7483% 7.75%, 100.1% 11%, 95.1024% 89.5%, 0.1136% 90.5%)",
-    }}
-  >
-    Let’s Talk <MdKeyboardArrowRight size={20} />
-  </button>
-</li>
-
+            <li>
+              <SkewedButton
+                text="Let's Talk"
+                color="#FA8C3D"
+                textColor="#fff"
+                size="medium"
+                icon={<MdKeyboardArrowRight size={20} />}
+                rounded={true}
+                onClick={() => {
+                  setIsOpen(false);
+                  const contactSection = document.getElementById("contact");
+                  if (contactSection) {
+                    contactSection.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
+              />
+            </li>
           </ul>
         </div>
       )}

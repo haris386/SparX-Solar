@@ -4,7 +4,7 @@ export default function WhySparXSolar() {
   const boxes = [
     {
       heading: "",
-      desc: "Customers face multiple barriers that reduce trust and slow down decision-making",
+      desc: "Customers face multiple barriers that reduce trust and slow down decision-making:",
     },
     {
       heading: "Missing Clear CTAs",
@@ -42,26 +42,39 @@ export default function WhySparXSolar() {
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl mb-12 text-[#303F52]">
           Why Sparx Solar{" "}
-          <span className="text-[#FA8C3D] block mt-2 font-bold"><span className="text-[#303F52] font-normal">Is</span> “Hard to Buy From”</span>
+          <span className="text-[#FA8C3D] block mt-2 font-bold">
+            <span className="text-[#303F52] font-normal">Is</span> “Hard to Buy From”
+          </span>
         </h2>
 
         {/* Boxes Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {boxes.map((box, index) => (
             <div
-  key={index}
-  className="p-6 rounded-[20px] bg-[#FFF6EF] hover:bg-[#FA8C3D] transition-colors cursor-pointer min-h-[180px] flex flex-col justify-start group"
->
-  {box.heading && (
-    <h3 className="text-lg font-semibold mb-2 text-[#303F52B2] group-hover:text-white transition-colors">
-      {box.heading}
-    </h3>
-  )}
-  <p className="text-sm text-[#303F52B2] group-hover:text-white transition-colors leading-relaxed">
-    {box.desc}
-  </p>
-</div>
-
+              key={index}
+              className={`p-6 rounded-[20px] min-h-[180px] flex flex-col justify-start ${
+                index === 0
+                  ? "bg-[#FA8C3D] text-white text-[20px]"
+                  : "bg-[#FFF6EF] text-[#303F52B2]"
+              }`}
+            >
+              {box.heading && (
+                <h3
+                  className={`font-semibold mb-2 ${
+                    index === 0 ? "text-white text-[20px]" : "text-[#303F52B2] text-lg"
+                  }`}
+                >
+                  {box.heading}
+                </h3>
+              )}
+              <p
+                className={`leading-relaxed ${
+                  index === 0 ? "text-white text-[20px]" : "text-[#303F52B2] text-sm"
+                }`}
+              >
+                {box.desc}
+              </p>
+            </div>
           ))}
         </div>
       </div>
