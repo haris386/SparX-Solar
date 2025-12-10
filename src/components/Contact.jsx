@@ -10,9 +10,6 @@ export default function Contact() {
       className="relative w-full bg-cover bg-center bg-no-repeat py-4 px-4"
       style={{ backgroundImage: "url('/images/contact.jpg')" }}
     >
-      {/* Left-to-right black overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent"></div>
-
       <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-40 items-start p-0 lg:p-20">
         {/* Left Column: Contact Info */}
         <div className="lg:w-1/2 flex flex-col gap-6 text-white">
@@ -20,30 +17,30 @@ export default function Contact() {
             Reach <span className="block">Out Today</span>
           </h2>
 
-          <h3 className="text-2xl md:text-[20px] font-[300] mt-10 lg:mt-40 font-[600]">Contact Us</h3>
+          <h3 className="text-2xl md:text-[20px] mt-10 lg:mt-40 font-[600]">Contact Us</h3>
 
           <div className="flex flex-col gap-4 text-lg md:text-[14px]">
             <div className="flex items-center gap-4">
-              <img src="/icons/phone.png" alt="Phone" className="w-6 h-6" />
+              <img src="/icons/phone.png" alt="Phone" className="w-5 h-5" />
               <span>+1 (877) 707 – 7279</span>
             </div>
             <div className="flex items-center gap-4">
-              <img src="/icons/mail.png" alt="Email" className="w-6 h-6" />
+              <img src="/icons/mail.png" alt="Email" className="w-5 h-5" />
               <span>info@sparx.solar</span>
             </div>
             <div className="flex items-start gap-4">
-              <img src="/icons/address.png" alt="Address 1" className="w-6 h-6 mt-1" />
+              <img src="/icons/address.png" alt="Address 1" className="w-5 h-5 mt-1" />
               <span>3311 W Catalina Dr. Unit A Phoenix, AZ 85017</span>
             </div>
             <div className="flex items-start gap-4">
-              <img src="/icons/address.png" alt="Address 2" className="w-6 h-6 mt-1" />
+              <img src="/icons/address.png" alt="Address 2" className="w-5 h-5 mt-1" />
               <span>9087 Arrow Rte. STE 120 Rancho Cucamonga, CA 91730</span>
             </div>
           </div>
         </div>
 
         {/* Right Column: Contact Form */}
-<div className="w-full lg:w-[40%] bg-white p-8 rounded-[20px] shadow-md">
+<div className="w-full lg:w-[35%] bg-white p-8 rounded-[20px] shadow-md">
 
           <h3 className="text-2xl md:text-3xl font-[300] text-[#303F52] mb-2 text-center">
             Let’s Start a Conversation
@@ -54,7 +51,7 @@ export default function Contact() {
             
             {/* First / Last Name */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full lg:w-[48%]">
                 <label className="text-sm font-medium text-[#303F52] mb-1">First Name</label>
                 <input
                   type="text"
@@ -62,7 +59,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full lg:w-[48%]">
                 <label className="text-sm font-medium text-[#303F52] mb-1">Last Name</label>
                 <input
                   type="text"
@@ -73,7 +70,7 @@ export default function Contact() {
 
             {/* Email / Phone */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full lg:w-[48%]">
                 <label className="text-sm font-medium text-[#303F52] mb-1">Email</label>
                 <input
                   type="email"
@@ -81,7 +78,7 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="flex flex-col w-full">
+              <div className="flex flex-col w-full lg:w-[48%]">
                 <label className="text-sm font-medium text-[#303F52] mb-1">Phone</label>
                 <input
                   type="tel"

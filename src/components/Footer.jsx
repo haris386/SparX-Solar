@@ -40,7 +40,7 @@ export default function Footer() {
 
 {/* Left Column */}
 <div className="bg-[#FFF6EF] p-8 text-[#303F52] border-b-2 border-[#FA8C3D]">
-  <p className="text-base md:text-lg leading-relaxed">
+  <p className="text-base md:text-[25px] leading-relaxed">
     Powering your home with clean, reliable solar energy while helping you save 
     money and build a sustainable future.
   </p>
