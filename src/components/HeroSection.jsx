@@ -38,7 +38,12 @@ export default function HeroSection() {
         textColor="#fff"
         size="medium"
         icon={<MdKeyboardArrowRight size={22} />}
-        onClick={() => alert("Free Quote clicked")}
+        onClick={() => {
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       />
 
       {/* White button with dark text */}
@@ -48,6 +53,12 @@ export default function HeroSection() {
         textColor="#303F52"
         size="medium"
         icon={<MdKeyboardArrowRight size={22} />}
+        onClick={() => {
+          const contactSection = document.getElementById("contact");
+          if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+          }
+        }}
       />
           </div>
            <div className="button-box">
