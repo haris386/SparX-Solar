@@ -50,7 +50,7 @@ export default function WhyChooseSparXSolar() {
             <h3
               className={`${
                 box.type === "main"
-                  ? "text-[40px] lg:text-[45px] leading-[1.2] mb-[10px] text-white font-normal"
+                  ? "text-[36px] lg:text-[45px] leading-[1.2] lg:mb-[10px] text-white font-normal"
                   : "text-xl sm:text-2xl font-semibold text-white"
               }`}
             >

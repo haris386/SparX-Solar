@@ -27,10 +27,10 @@ const SkewedButton = ({
   if (size === "small") padding = "8px 20px";
   else if (size === "large") padding = "16px 36px";
   else if (typeof size === "object" && size.padding) padding = size.padding;
-  else padding = "12px 28px"; // default medium
+  else padding = "12px 28px";
 
   // Dynamic border-radius
-  const borderRadius = rounded ? "10px" : "0px";
+  const borderRadius = rounded ? "5px 15px 5px 15px" : "0px";
 
   return (
     <button

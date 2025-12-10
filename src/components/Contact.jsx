@@ -12,7 +12,7 @@ export default function Contact() {
     >
       <div className="w-full flex flex-col lg:flex-row gap-12 lg:gap-40 items-start p-0 lg:p-20">
         {/* Left Column: Contact Info */}
-        <div className="lg:w-1/2 flex flex-col gap-6 text-white">
+        <div className="lg:w-1/2 flex flex-col gap-6 text-white p-[5%]">
           <h2 className="text-4xl md:text-[44px] leading-[1.2] font-[400]">
             Reach <span className="block">Out Today</span>
           </h2>
