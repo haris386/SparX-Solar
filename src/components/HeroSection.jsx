@@ -66,45 +66,44 @@ export default function HeroSection() {
       </div>
     </section>
 
-    <section
-        id="home"
-        className="block sm:hidden relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-28 bg-[url('/images/mobilebg.png')]"
-      >
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#26384e]/90 to-black/30"></div>
+<section
+  id="home"
+  className="block sm:hidden relative w-full min-h-screen bg-cover bg-center bg-no-repeat bg-[url('/images/mobilebg.png')]"
+>
+  {/* Gradient Overlay */}
+  <div className="absolute inset-0 bg-gradient-to-r from-[#26384e]/90 to-black/30"></div>
 
-        {/* Content */}
-        <div className="relative w-[90%] mx-auto text-white max-w-[1400px]">
-          <div className="space-y-6">
-            <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[44px] xl:text-[44px] custom-lh ">
-            Quality Solar Installation.
-            <br className="hidden sm:block" />
-            <span className="mr-1"></span>We're Using Sunlight to Keep The Lights On
-          </h1>
-            <p className="text-[14px] text-gray-200 leading-relaxed font-[300]">
-              Sparx Solar helps homeowners switch to clean energy with trusted
-              installation, transparent pricing, and a seamless experience from
-              start to finish.
-            </p>
-            <div className="flex flex-row gap-4 pt-4">
-              <SkewedButton
-                text="Free Quote"
-                color="#FA8C3D"
-                textColor="#fff"
-                size="small"
-                icon={<MdKeyboardArrowRight size={22} />}
-              />
-              <SkewedButton
-                text="Book Consultation"
-                color="white"
-                textColor="#303F52"
-                size="small"
-                icon={<MdKeyboardArrowRight size={22} />}
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+  {/* Content absolutely at bottom */}
+  <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 w-[90%] text-white max-w-[1400px]">
+    <div className="space-y-6">
+      <h1 className="text-3xl font-semibold">
+        Quality Solar Installation.
+      </h1>
+      <p className="text-[14px] text-gray-200 leading-relaxed font-[300]">
+        Sparx Solar helps homeowners switch to clean energy with trusted
+        installation, transparent pricing, and a seamless experience from
+        start to finish.
+      </p>
+      <div className="flex flex-row gap-4 pt-4">
+        <SkewedButton
+          text="Free Quote"
+          color="#FA8C3D"
+          textColor="#fff"
+          size="small"
+          icon={<MdKeyboardArrowRight size={22} />}
+        />
+        <SkewedButton
+          text="Book Consultation"
+          color="white"
+          textColor="#303F52"
+          size="small"
+          icon={<MdKeyboardArrowRight size={22} />}
+        />
+      </div>
+    </div>
+  </div>
+</section>
+
       </>
   );
 }
