@@ -68,7 +68,7 @@ export default function HeroSection() {
 
     <section
         id="home"
-        className="block sm:hidden relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-6 bg-[url('/images/mobilebg.png')]"
+        className="block sm:hidden relative w-full min-h-screen bg-cover bg-center bg-no-repeat flex flex-col justify-end pb-10 bg-[url('/images/mobilebg.png')]"
       >
         {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#26384e]/90 to-black/30"></div>
