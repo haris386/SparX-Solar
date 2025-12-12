@@ -81,7 +81,7 @@ export default function HeroSection() {
             <br className="hidden sm:block" />
             <span className="mr-1"></span>We're Using Sunlight to Keep The Lights On
           </h1>
-            <p className="text-base text-gray-200 leading-relaxed font-[300]">
+            <p className="text-[14px] text-gray-200 leading-relaxed font-[300]">
               Sparx Solar helps homeowners switch to clean energy with trusted
               installation, transparent pricing, and a seamless experience from
               start to finish.
