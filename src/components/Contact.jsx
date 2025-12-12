@@ -54,18 +54,21 @@ export default function Contact() {
   };
 
   return (
-    <section
-      id="contact"
-      className="relative w-full bg-cover bg-center bg-no-repeat py-12 px-4"
-      style={{ backgroundImage: "url('/images/contact.jpg')" }}
-    >
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-40 items-start">
+<section
+  id="contact"
+  className="relative w-full bg-cover bg-center bg-no-repeat py-12 px-4"
+  style={{
+    backgroundImage: `linear-gradient(117deg, rgb(0 0 0) 1%, rgb(255 255 255 / 2%) 32%), url('/images/contact.jpg')`,
+  }}
+>
+
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-12 lg:gap-40 items-end">
         {/* Left Column */}
         <div className="lg:w-1/2 flex flex-col gap-6 text-white p-5">
-          <h2 className="text-4xl md:text-[44px] font-[400] leading-[1.2]">
+          <h2 className="text-4xl md:text-[55px] font-[400] leading-[1.2]">
             Reach <span className="block">Out Today</span>
           </h2>
-          <h3 className="text-2xl md:text-[20px] mt-10 font-[600]">Contact Us</h3>
+          <h3 className="text-2xl md:text-[20px] lg:mt-32 font-[600]">Contact Us</h3>
 
           <div className="flex flex-col gap-4 text-lg md:text-[14px]">
             <div className="flex items-center gap-4">
@@ -156,14 +159,15 @@ export default function Contact() {
               {/* Comments */}
               <div className="flex flex-col">
                 <label className="text-sm font-medium text-[#303F52] mb-1">Comments</label>
-                <textarea
-                  name="comments"
-                  value={formData.comments}
-                  onChange={handleChange}
-                  rows={4}
-                  placeholder="Please let us know what's on your mind. Have a question for us? Ask away."
-                  className="p-3 rounded-md bg-[#FFF6EF] border border-transparent focus:border-[#FA8C3D] outline-none"
-                />
+               <textarea
+  name="comments"
+  value={formData.comments}
+  onChange={handleChange}
+  rows={4}
+  placeholder="Please let us know what's on your mind. Have a question for us? Ask away."
+  className="p-3 rounded-md bg-[#FFF6EF] border border-transparent focus:border-[#FA8C3D] outline-none placeholder:text-[14px]"
+/>
+
               </div>
 
               {/* Submit */}

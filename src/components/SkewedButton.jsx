@@ -1,18 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./SkewedButton.css";
 
-/**
- * Props:
- * - text: string -> button text
- * - color: string -> background color (default: #3498db)
- * - textColor: string -> text color (default: white)
- * - size: 'small' | 'medium' | 'large' | {padding: string} -> button size
- * - icon: React component -> optional icon displayed after text
- * - onClick: function -> click handler
- * - rounded: boolean -> default true, if false border-radius is removed
- */
 const SkewedButton = ({
   text = "Button",
   color = "#3498db",
@@ -22,20 +12,52 @@ const SkewedButton = ({
   onClick,
   rounded = true,
 }) => {
-  // Set padding based on size
-  let padding;
-  if (size === "small") padding = "8px 20px";
-  else if (size === "large") padding = "16px 36px";
-  else if (typeof size === "object" && size.padding) padding = size.padding;
-  else padding = "12px 28px";
 
-  // Dynamic border-radius
-  const borderRadius = rounded ? "5px 15px 5px 15px" : "0px";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+
+    checkWidth();          // run immediately
+    window.addEventListener("resize", checkWidth);
+
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+  let padding = isMobile ? "8px 15px" : "12px 28px";
+
+  // Desktop responsive override
+  if (!isMobile && typeof size === "string" && size.includes("sm:")) {
+    const parts = size.split(" ");
+    const desktopSize = parts[1].replace("sm:", "");
+
+    const desktopPadding =
+      desktopSize === "small"
+        ? "8px 20px"
+        : desktopSize === "large"
+        ? "16px 36px"
+        : "12px 28px";
+
+    if (typeof document !== "undefined") {
+      document.documentElement.style.setProperty(
+        "--skew-button-desktop-padding",
+        desktopPadding
+      );
+    }
+  }
 
   return (
     <button
-      className="skewed-button flex items-center justify-center gap-2"
-      style={{ background: color, padding, color: textColor, borderRadius }}
+      className="skewed-button flex items-center justify-center lg:gap-2"
+      style={{
+        background: color,
+        padding,
+        color: textColor,
+        fontSize: isMobile ? "14px" : "16px",
+        borderRadius: rounded ? "5px 15px 5px 15px" : "0px",
+      }}
       onClick={onClick}
     >
       <span>{text}</span>

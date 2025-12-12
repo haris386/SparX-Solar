@@ -2,10 +2,9 @@
   position: relative;
   border: none;
   transform: skewX(-30deg);
-  color: #fff;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 5px 15px 5px 15px; /* top-left, top-right, bottom-right, bottom-left */
+  border-radius: 5px 15px 5px 15px;
 }
 
 .skewed-button:after {
@@ -35,4 +34,20 @@
 .skewed-button span {
   display: inline-block;
   transform: skewX(30deg);
+}
+
+/* Desktop override */
+@media (min-width: 640px) {
+  .skewed-button {
+    padding: var(--skew-button-desktop-padding) !important;
+    font-size: 16px !important;
+  }
+}
+
+/* Mobile override */
+@media (max-width: 639px) {
+  .skewed-button {
+    padding: 8px 15px !important;
+    font-size: 14px !important;
+  }
 }

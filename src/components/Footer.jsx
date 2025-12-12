@@ -11,7 +11,7 @@ export default function Footer() {
           <img 
             src="/logos/sparXSolar-header.png"
             alt="SparX Solar"
-            className="w-40 md:w-48"
+            className="w-40 md:w-72"
           />
 
           {/* Follow Us */}
