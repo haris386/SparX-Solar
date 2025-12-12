@@ -56,7 +56,7 @@ export default function Contact() {
   return (
 <section
   id="contact"
-  className="relative w-full bg-cover bg-center bg-no-repeat py-12 px-4"
+  className="relative w-full bg-cover bg-center bg-no-repeat py-12 px-4  mt-24"
   style={{
     backgroundImage: `linear-gradient(117deg, rgb(0 0 0) 1%, rgb(255 255 255 / 2%) 32%), url('/images/contact.jpg')`,
   }}

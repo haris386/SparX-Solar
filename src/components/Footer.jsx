@@ -3,7 +3,7 @@
 export default function Footer() {
   return (
     <footer className="w-full bg-white py-16 px-4 pb-6">
-      <div className="w-[90%] md:w-[90%] mx-auto flex flex-col gap-4">
+      <div className="w-[98%] md:w-[90%] mx-auto flex flex-col gap-4">
 
         {/* Top Row: Logo + Social */}
         <div className="flex items-center justify-between flex-wrap gap-6">

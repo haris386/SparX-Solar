@@ -74,7 +74,7 @@ export default function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#26384e]/90 to-black/30"></div>
 
         {/* Content */}
-        <div className="relative w-[90%] mx-auto text-white max-w-[1400px] mb-6">
+        <div className="relative w-[90%] mx-auto text-white max-w-[1400px]">
           <div className="space-y-6">
             <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[44px] xl:text-[44px] custom-lh ">
             Quality Solar Installation.

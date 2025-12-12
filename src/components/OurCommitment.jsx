@@ -25,7 +25,7 @@ export default function OurCommitment() {
 
   return (
     <>
-    <section className="flex justify-center py-16">
+    <section className="flex justify-center mt-24 lg:mt-0">
       {/* Container with 90% width and rounded corners */}
       <div
         className="w-[90%] rounded-[30px] overflow-hidden relative"
@@ -92,7 +92,7 @@ export default function OurCommitment() {
         </div>
       </div>
     </section>
-    <section className="flex justify-center py-16">
+    <section className="flex justify-center  mt-24 lg:mt-0 lg:py-28">
   <div className="w-[90%] md:w-[80%] flex flex-col lg:flex-row items-center lg:items-center lg:gap-6 gap-8">
     {/* Left Column: Image */}
     <div className="lg:w-1/2">

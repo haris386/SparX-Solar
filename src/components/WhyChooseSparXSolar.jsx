@@ -29,7 +29,7 @@ export default function WhyChooseSparXSolar() {
   ];
 
   return (
-    <section className="flex justify-center py-16">
+    <section className="flex justify-center  mt-24 lg:mt-0">
       <div className="w-[90%] md:w-[80%] grid grid-cols-1 md:grid-cols-2 gap-6">
         {boxes.map((box, index) => (
           <div

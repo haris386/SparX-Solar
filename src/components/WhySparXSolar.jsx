@@ -37,8 +37,8 @@ export default function WhySparXSolar() {
   ];
 
   return (
-    <section className="w-full flex justify-center py-28 bg-white">
-      <div className="w-[80%] max-w-[1400px]">
+    <section className="w-full flex justify-center mt-24 lg:mt-0 lg:py-28 bg-white">
+      <div className="w-[90%] lg:w-[80%] max-w-[1400px]">
         {/* Heading */}
         <h2 className="text-3xl md:text-4xl mb-12 text-[#303F52]">
           Why Sparx Solar{" "}

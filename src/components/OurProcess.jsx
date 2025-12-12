@@ -3,7 +3,7 @@
 export default function OurProcess() {
   return (
     <>
-    <section className="w-full bg-[#14273C] py-24 flex justify-center items-center text-center px-4">
+    <section className="w-full bg-[#14273C]  mt-24 py-24 flex justify-center items-center text-center px-4">
       <h2 className="text-[40px] md:text-[55px] leading-[1.2] max-w-[1200px] text-white font-[200]">
         <span className="text-[#FA8C3D]">Sparx Solar</span>{" "}
         <span className="capitalize">
@@ -15,7 +15,7 @@ export default function OurProcess() {
     </section>
 
     <section className="w-full py-24 flex justify-center px-4">
-        <div className="w-[90%] md:w-[80%]">
+        <div className="w-[98%] md:w-[80%]">
           {/* Top row: Heading and text */}
           <div className="flex flex-col lg:flex-row justify-between items-center gap-6">
             <h2 className="text-3xl md:text-[44px] text-[#303F52] font-[300]">

@@ -28,8 +28,8 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="w-full py-24 flex justify-center px-4">
-      <div className="w-[90%] md:w-[80%] flex flex-col lg:flex-row gap-8 items-center">
+    <section className="w-full  flex justify-center px-4">
+      <div className="w-[98%] md:w-[80%] flex flex-col lg:flex-row gap-8 items-center">
         {/* Left Column: Image */}
         <div className="lg:w-1/2 flex justify-center lg:justify-start">
           <img
