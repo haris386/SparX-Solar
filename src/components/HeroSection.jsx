@@ -76,9 +76,11 @@ export default function HeroSection() {
         {/* Content */}
         <div className="relative w-[90%] mx-auto text-white max-w-[1400px] mb-6">
           <div className="space-y-6">
-            <h1 className="text-3xl font-semibold">
-              Quality Solar Installation.
-            </h1>
+            <h1 className="text-3xl sm:text-4xl md:text-[44px] lg:text-[44px] xl:text-[44px] custom-lh ">
+            Quality Solar Installation.
+            <br className="hidden sm:block" />
+            <span className="mr-1"></span>We're Using Sunlight to Keep The Lights On
+          </h1>
             <p className="text-base text-gray-200 leading-relaxed font-[300]">
               Sparx Solar helps homeowners switch to clean energy with trusted
               installation, transparent pricing, and a seamless experience from
